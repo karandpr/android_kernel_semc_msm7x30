@@ -19,14 +19,6 @@
 #include <mach/camera.h>
 #include "mt9v114.h"
 
-#ifdef CONFIG_MSM_CAMERA_DEBUG
-	#ifdef CDBG
-	#undef CDBG
-	#endif
-	#define CDBG(fmt, args...) \
-		printk(KERN_ERR "msm_cam_mt9v114: " fmt, ##args)
-#endif
-
 struct mt9v114_work {
 	struct work_struct work;
 };

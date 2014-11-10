@@ -721,9 +721,8 @@ void msm_camera_bus_scale_cfg(uint32_t bus_perf_client,
 #include <mach/board.h>
 #include <media/msm_camera.h>
 
-#define CONFIG_MSM_CAMERA_DEBUG
 #ifdef CONFIG_MSM_CAMERA_DEBUG
-#define CDBG(fmt, args...) pr_debug(fmt, ##args)
+#define CDBG(fmt, args...) pr_err(fmt, ##args)
 #else
 #define CDBG(fmt, args...) do { } while (0)
 #endif

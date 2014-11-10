@@ -24,7 +24,6 @@
 #include <linux/module.h>
 #include <mach/irqs.h>
 #include <linux/io.h>
-#define CONFIG_MSM_CAMERA_DEBUG
 #include "msm_vpe1_standalone.h"
 #include <linux/pm_qos.h>
 #include <linux/android_pmem.h>
@@ -33,10 +32,6 @@
 #include <asm/div64.h>
 
 #define MSM_VPE_NAME "msm_vpe"
-/*
-#undef CDBG
-#define CDBG(fmt, args...) pr_info(fmt, ##args)
-*/
 
 static int vpe_update_scaler(struct video_crop_t *pcrop);
 static struct class *msm_vpe_class;

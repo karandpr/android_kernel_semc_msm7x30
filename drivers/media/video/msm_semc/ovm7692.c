@@ -29,14 +29,6 @@
 #define COM12_YUV		0x00	/* YUV */
 #define COM12_RGB565	0x06
 
-
-#ifdef CONFIG_MSM_CAMERA_DEBUG
-	#ifdef CDBG
-	#undef CDBG
-	#endif
-	#define CDBG(fmt, args...) printk(KERN_ERR "msm_cam_ovm7692: " fmt, ##args)
-#endif
-
 struct ovm7692_work {
 	struct work_struct work;
 };
